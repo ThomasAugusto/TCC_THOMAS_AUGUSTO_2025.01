@@ -1,16 +1,16 @@
 # TCC_THOMAS_AUGUSTO_2025.01
 ## Título TCC
-1. [Introdução](#introdução)
-    1. [Tema](#tema)
-    1. [Problema](#problema)
-    1. [Hipótese de solução](#hipótese-de-solução)
-    1. [Objetivo geral](#objetivo-geral)
-    1. [Objetivos específicos](#objetivos-específicos)
-1. [Fundamentação teórica](#fundamentação-teórica)
-1. [Metodologia](#metodologia)
-1. [Resultados e contribuições esperadas](#fundamentação-teórica)
-1. [Referências](#referências)
-1. [Outros](#outros)
+1. [Introdução](#1-introdução)
+    1. [Tema](#11-tema)
+    1. [Problema](#12-problema)
+    1. [Hipótese de solução](#13-hipótese-de-solução)
+    1. [Objetivo geral](#14-objetivo-geral)
+    1. [Objetivos específicos](#15-objetivos-específicos)
+1. [Fundamentação teórica](#2-fundamentação-teórica)
+1. [Metodologia](#3-metodologia)
+1. [Resultados e contribuições esperadas](#4-resultados-e-contribuições-esperadas)
+1. [Referências](#5-referências)
+1. [Outros](#6-outros)
 ### 1. Introdução
 ### 1.1 Tema
 Desenvolvimento de Sistema REST API para Digitalização e Integração de Processos Acadêmicos.
@@ -27,9 +27,31 @@ Concepção do sistema, elaboração do sistema, contrução do sistema e transi
 
 Deixar o sistema bem documentado, a escrita de código de facíl entendimento e arquitetura bem definida, de forma que o sistema possa ser de fácil manutenção e apliado a outros processos que envolvem o aluno e secretaria.
 ### 1.5 Objetivos específicos
+Concepção: Organizar e levantar os pontos necessários para que se possa visualizar, entender e estipular soluções do problema a ser solucionado, definir modelo de domínio e estimativas vagas;
+
+Elaboração: Refinar o modelo de domínio, criar casos de uso, definir interfaces e classes, implementação iterativa da arquitetura central, aprofundar requisitos, escopo e estimativas mais realistas.
+
+Contrução: Codificar o sistema, iterar requisitos restantes e refinar alinhamento da proposta a solução do problema.
+
+Transição: Implementação do sistema, testes e validação, para verificar se o resultado atendeu ao que foi proposto.
 ### 2 Fundamentação teórica
 ### 3 Metodologia
+#### 3.1 UML
+Utilizar Linguagem de Modelagem Unificada (UML) para rascunhar o sistema de maneira genérica;
+
+Usar UML como planta de software, criando diagramas detalhados sobre sobre classes, interfaces, sequência de processos e etc.
+#### 3.2 Metodos ágeis
+Utilizar de metodologias ágeis para adaptação e mudanças durante o desenvolvimento do projeto;
+
+Dividir o desenvolvimento do sistema em funcionalidades para que possa testar, validar de acordo com feedback dos interessados, procurando entregar um sistema desenvolvido de maneira simples, e mais agíl possível, bucando atender somente o que foi proposto, evitando excesso de funcionalidades e complexibilidade desnecessária.
+#### 3.3 Arquitetura REST API
+Estruturar o sistema utilizando arquitetura REST API, separando o sistema em camadas padronizadas como CONTROLLER, SERVICE, DOMINIO e REPOSITORY, melhorando o desacoplamento entre as classes e definindo bem as responsabilidades entre cada camada.
+#### 3.4 Pesquisa
+Utilizar de pesquisa Bibliográfica em livros, documentos e artigos ciêntificos para obter conhecimentos necessários para desenvolvimento e agregação de valor a composição do trabalho;
+
+Usar pesquisa experimental, com objetivo de desenvolver orientado a testes, para que se possa ter controle e acompanhamento do desenvolvimento.
 ### 4 Resultados e contribuições esperadas
+Apresentar uma solução a faculdade, utilizando de tecnologia para melhorar a integração entre estudantes e secretaria em processos internos da instituição. Apromorar-me como aluno e pessoa, desenvolver novas habilidades e competências. Contribuir de forma acadêmica com material ciêntifico que sirva como apoio para aprimoramento e/ou inspiração a outros estudantes.
 ### 5 Referências
 ### 6 Outros
 
