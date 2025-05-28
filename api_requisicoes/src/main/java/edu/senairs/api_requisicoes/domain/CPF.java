@@ -1,7 +1,7 @@
 package edu.senairs.api_requisicoes.domain;
 
 public class CPF {
-    private String cpf;
+    private final String cpf;
 
     public CPF(String cpf) {
         if (!cpfIsValid(cpf)) {

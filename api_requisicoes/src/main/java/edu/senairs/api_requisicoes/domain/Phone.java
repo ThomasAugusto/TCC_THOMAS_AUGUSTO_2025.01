@@ -1,7 +1,7 @@
 package edu.senairs.api_requisicoes.domain;
 
 public class Phone {
-    private String number;
+    private final String number;
 
     public Phone(String number) {
         if (!phoneNumberIsValid(number)){

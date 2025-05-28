@@ -23,5 +23,9 @@ public class Student {
 
     public Student(StudentRequestDTO user) {
         this.nameStudent = user.name();
+        this.emailStudent = new Email(user.email());
+        this.passwordStudent = user.password();
+        this.cpfStudent = new CPF(user.cpf());
+        this.phoneStudent = new Phone(user.phoneNumber());
     }
 }

@@ -3,17 +3,24 @@ package edu.senairs.api_requisicoes.service;
 import edu.senairs.api_requisicoes.domain.Student;
 import edu.senairs.api_requisicoes.domain.StudentRequestDTO;
 import edu.senairs.api_requisicoes.domain.StudentResponseDTO;
+import edu.senairs.api_requisicoes.repository.StudentMongoDbRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class StudentService implements IUserService<StudentRequestDTO, StudentResponseDTO> {
+    StudentMongoDbRepository studentRepository;
+
+    public StudentService(StudentMongoDbRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
 
     @Override
     public String insertUser(StudentRequestDTO user) {
         Student student = new Student(user);
-        return "";
+        studentRepository.save(student);
+        return student.getIdStudent();
     }
 
     @Override
@@ -22,7 +29,7 @@ public class StudentService implements IUserService<StudentRequestDTO, StudentRe
     }
 
     @Override
-    public String deleteUser(String id) {
+    public String deleteUserById(String id) {
         return "";
     }
 
