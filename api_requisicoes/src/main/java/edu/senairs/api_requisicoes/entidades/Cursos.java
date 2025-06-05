@@ -14,6 +14,13 @@ public enum Cursos {
     TRC_EAD("Superior de tecnologia em Redes de Computadores - EAD"),
     TST_EAD("Superior de tecnologia em Sistemas de Telecomunicações - EAD");
 
+    private final String descricao;
+
     Cursos(String s) {
+        this.descricao = s;
+    }
+
+    public String getDescricao() {
+        return descricao;
     }
 }

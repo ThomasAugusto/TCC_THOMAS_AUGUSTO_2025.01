@@ -10,7 +10,7 @@ public class TrancamentoMatricula {
     EstadoTDM estadoProcesso;
 
     public TrancamentoMatricula(Integer numeroSemestresAfastado, String motivosAfastamento,
-                                Cursos curso, EstadoTDM estadoProcesso) {
+                                Cursos curso) {
         this.nomeProcesso = "Trancamento de matrícula";
         this.numeroSemestresAfastado = numeroSemestresAfastado;
         this.motivosAfastamento = motivosAfastamento;
@@ -56,5 +56,39 @@ public class TrancamentoMatricula {
 
     public void setEstadoProcesso(EstadoTDM estadoProcesso) {
         this.estadoProcesso = estadoProcesso;
+    }
+
+    // metodos de transição de estado
+    public void processoSolicitado(){
+        estadoProcesso.processoSolicitado(this);
+    }
+    public void complementarDados(){
+        estadoProcesso.complementarDados(this);
+    }
+    public void deferirEmCoordenacao() {
+        estadoProcesso.deferirEmCoordenacao(this);
+    }
+
+    public void verificarPendenciasBiblioteca() {
+        estadoProcesso.verificarPendenciasBiblioteca(this);
+    }
+
+    public void executarProcessosFinanceiros() {
+        estadoProcesso.executarProcessosFinanceiros(this);
+    }
+
+    public void arquivarProcesso() {
+        estadoProcesso.arquivarProcesso(this);
+    }
+
+    @Override
+    public String toString() {
+        return "TrancamentoMatricula\n{" +
+                "nomeProcesso='" + nomeProcesso + '\'' +
+                ",\n numeroSemestresAfastado=" + numeroSemestresAfastado +
+                ",\n motivosAfastamento='" + motivosAfastamento + '\'' +
+                ",\n curso=" + curso.getDescricao() +
+                ",\n estadoProcesso=" + estadoProcesso.getClass().getSimpleName() +
+                '}';
     }
 }
