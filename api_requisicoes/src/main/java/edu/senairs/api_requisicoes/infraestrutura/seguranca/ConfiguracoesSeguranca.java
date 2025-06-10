@@ -1,5 +1,6 @@
 package edu.senairs.api_requisicoes.infraestrutura.seguranca;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -11,13 +12,16 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
 public class ConfiguracoesSeguranca {
+    @Autowired
+    filtroSeguranca filtroSeguranca;
 
     @Bean
-    public SecurityFilterChain filtroSeguraca(HttpSecurity httpSecurity) throws Exception{
+    public SecurityFilterChain filtroSeguracaCorrente(HttpSecurity httpSecurity) throws Exception{
         return httpSecurity
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -27,6 +31,7 @@ public class ConfiguracoesSeguranca {
                         .requestMatchers(HttpMethod.GET, "/user").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
+                .addFilterBefore(filtroSeguranca, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 
