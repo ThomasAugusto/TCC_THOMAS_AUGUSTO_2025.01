@@ -5,7 +5,7 @@ import edu.senairs.api_requisicoes.entidades.Cursos;
 public class Teste {
     public static void main(String[] args) {
         TrancamentoMatricula processo = new TrancamentoMatricula(2,
-                                    "Falta do pila", Cursos.TAI);
+                                    "Falta de dinheiro", Cursos.TAI);
         System.out.println(processo);
 
         processo.complementarDados();
@@ -14,7 +14,7 @@ public class Teste {
         processo.processoSolicitado();
         System.out.println(processo);
 
-        processo.deferirEmCoordenacao();
+        processo.getEstadoProcesso().deferirEmCoordenacao(processo);
         System.out.println(processo);
     }
 }

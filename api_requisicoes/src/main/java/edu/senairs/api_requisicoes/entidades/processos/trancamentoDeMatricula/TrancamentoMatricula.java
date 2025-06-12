@@ -8,6 +8,11 @@ public class TrancamentoMatricula {
     String motivosAfastamento;
     Cursos curso;
     EstadoTDM estadoProcesso;
+//    Aluno aluno;
+//    Secretaria secretaria;
+//    Coordenacao coordenacao;
+//    Biblioteca biblioteca;
+//    Financeiro financeiro;
 
     // O TrancamentoMatricula podera ser instanciado pelas entidades Aluno ou Secretaria
 
