@@ -1,6 +1,6 @@
 package edu.senairs.api_requisicoes.infraestrutura.seguranca;
 
-import edu.senairs.api_requisicoes.adaptadores.saidas.repository.MongoUsuariosRepositorio;
+import edu.senairs.api_requisicoes.adaptadores.saidas.repository.MongoUsuariosRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -19,7 +19,7 @@ public class filtroSeguranca extends OncePerRequestFilter {
     @Autowired
     TokenService tokenService;
     @Autowired
-    MongoUsuariosRepositorio mongoDbRep;
+    MongoUsuariosRepository mongoDbRep;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {

@@ -1,6 +1,6 @@
 package edu.senairs.api_requisicoes.aplicacao.service;
 
-import edu.senairs.api_requisicoes.adaptadores.saidas.repository.MongoUsuariosRepositorio;
+import edu.senairs.api_requisicoes.adaptadores.saidas.repository.MongoUsuariosRepository;
 import edu.senairs.api_requisicoes.entidades.AutentificadorDTO;
 import edu.senairs.api_requisicoes.entidades.MongoUsuario;
 import edu.senairs.api_requisicoes.entidades.RegristroDTO;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 public class UsuarioService {
 
     @Autowired
-    private MongoUsuariosRepositorio mongoDbRep;
+    private MongoUsuariosRepository mongoDbRep;
 
     @Autowired
     private TokenService tokenService;

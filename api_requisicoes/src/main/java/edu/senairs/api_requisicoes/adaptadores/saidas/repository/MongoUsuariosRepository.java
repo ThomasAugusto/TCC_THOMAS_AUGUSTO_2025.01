@@ -6,6 +6,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface MongoUsuariosRepositorio extends MongoRepository<MongoUsuario, String> {
+public interface MongoUsuariosRepository extends MongoRepository<MongoUsuario, String> {
     UserDetails findByEmailUsuario(String email);
 }

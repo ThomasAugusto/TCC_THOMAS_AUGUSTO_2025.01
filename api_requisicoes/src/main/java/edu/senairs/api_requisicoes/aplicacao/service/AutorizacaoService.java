@@ -1,6 +1,6 @@
 package edu.senairs.api_requisicoes.aplicacao.service;
 
-import edu.senairs.api_requisicoes.adaptadores.saidas.repository.MongoUsuariosRepositorio;
+import edu.senairs.api_requisicoes.adaptadores.saidas.repository.MongoUsuariosRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -9,10 +9,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class AutorizacaoService implements UserDetailsService {
 
-    final
-    MongoUsuariosRepositorio mongoDbRep;
+    final MongoUsuariosRepository mongoDbRep;
 
-    public AutorizacaoService(MongoUsuariosRepositorio mongoDbRep) {
+    public AutorizacaoService(MongoUsuariosRepository mongoDbRep) {
         this.mongoDbRep = mongoDbRep;
     }
 
