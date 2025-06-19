@@ -30,12 +30,10 @@ public abstract class Usuario {
     }
 
     public abstract List<Requerimento> listarRequerimentos();
-    public abstract void selecionarRequerimento();
+    public abstract void solicitarRequerimento();
     public abstract void arquivarRequerimento();
     public abstract void avancarRequerimento();
     public abstract void retrocederRequerimento();
-    public abstract List<Processo> listarProcessos();
-    public abstract void selecionarProcesso();
     public abstract void adicionarComentario();
 
 }
