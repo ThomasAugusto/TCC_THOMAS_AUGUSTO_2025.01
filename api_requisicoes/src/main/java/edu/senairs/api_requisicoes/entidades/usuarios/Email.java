@@ -1,4 +1,4 @@
-package edu.senairs.api_requisicoes.dominio;
+package edu.senairs.api_requisicoes.entidades.usuarios;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

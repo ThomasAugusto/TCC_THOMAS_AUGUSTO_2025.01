@@ -1,6 +1,4 @@
-package edu.senairs.api_requisicoes.test.entidades;
-
-import edu.senairs.api_requisicoes.test.entidades.teste.Requerimento;
+package edu.senairs.api_requisicoes.dominio;
 
 import java.util.List;
 

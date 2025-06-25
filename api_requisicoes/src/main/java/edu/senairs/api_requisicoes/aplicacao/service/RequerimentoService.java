@@ -11,6 +11,9 @@ public class RequerimentoService {
     @Autowired
     private MongoRequerimentosRepository mongoDbRepository;
 
+    @Autowired
+    private UsuarioService usuarioService;
+
     public void solicitarRequerimento(MongoRequerimento data){
         this.mongoDbRepository.save(data);
     }

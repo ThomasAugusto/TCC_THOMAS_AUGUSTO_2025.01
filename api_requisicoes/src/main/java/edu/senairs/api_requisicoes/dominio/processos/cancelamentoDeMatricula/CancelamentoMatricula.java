@@ -1,6 +1,6 @@
 package edu.senairs.api_requisicoes.dominio.processos.cancelamentoDeMatricula;
 
-import edu.senairs.api_requisicoes.test.entidades.Cursos;
+import edu.senairs.api_requisicoes.dominio.Cursos;
 
 public class CancelamentoMatricula {
     String nomeProcesso;

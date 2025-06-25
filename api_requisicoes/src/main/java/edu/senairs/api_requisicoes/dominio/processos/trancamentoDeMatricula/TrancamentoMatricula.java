@@ -1,6 +1,6 @@
 package edu.senairs.api_requisicoes.dominio.processos.trancamentoDeMatricula;
 
-import edu.senairs.api_requisicoes.test.entidades.Cursos;
+import edu.senairs.api_requisicoes.dominio.Cursos;
 
 public class TrancamentoMatricula {
     String nomeProcesso;

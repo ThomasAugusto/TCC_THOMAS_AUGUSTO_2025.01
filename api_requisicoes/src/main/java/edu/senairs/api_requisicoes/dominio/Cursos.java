@@ -1,4 +1,4 @@
-package edu.senairs.api_requisicoes.test.entidades;
+package edu.senairs.api_requisicoes.dominio;
 
 public enum Cursos {
     TAS("Superior de tecnologia em Análise e Desenvolvimento de Sistemas"),

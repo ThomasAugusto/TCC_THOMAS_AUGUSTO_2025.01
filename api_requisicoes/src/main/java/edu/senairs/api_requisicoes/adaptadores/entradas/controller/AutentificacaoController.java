@@ -1,9 +1,9 @@
 package edu.senairs.api_requisicoes.adaptadores.entradas.controller;
 
 import edu.senairs.api_requisicoes.aplicacao.service.UsuarioService;
-import edu.senairs.api_requisicoes.entidades.AutentificadorDTO;
-import edu.senairs.api_requisicoes.entidades.LoginResponseDTO;
-import edu.senairs.api_requisicoes.entidades.RegristroDTO;
+import edu.senairs.api_requisicoes.entidades.usuarios.AutentificadorDTO;
+import edu.senairs.api_requisicoes.entidades.usuarios.LoginResponseDTO;
+import edu.senairs.api_requisicoes.entidades.usuarios.RegristroDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,9 +18,10 @@ public class AutentificacaoController {
     @Autowired
     private UsuarioService usuarioService;
 
-    @PostMapping("login")
+    @PostMapping("/login")
     public ResponseEntity login(@RequestBody AutentificadorDTO data){
         String token = this.usuarioService.autentificarUsuario(data);
+        this.usuarioService.getUsuarioByToken(token);
         return ResponseEntity.ok(new LoginResponseDTO(token));
     }
 

@@ -1,9 +1,9 @@
 package edu.senairs.api_requisicoes.aplicacao.service;
 
 import edu.senairs.api_requisicoes.adaptadores.saidas.repository.MongoUsuariosRepository;
-import edu.senairs.api_requisicoes.entidades.AutentificadorDTO;
-import edu.senairs.api_requisicoes.entidades.MongoUsuario;
-import edu.senairs.api_requisicoes.entidades.RegristroDTO;
+import edu.senairs.api_requisicoes.entidades.usuarios.AutentificadorDTO;
+import edu.senairs.api_requisicoes.entidades.usuarios.MongoUsuario;
+import edu.senairs.api_requisicoes.entidades.usuarios.RegristroDTO;
 import edu.senairs.api_requisicoes.infraestrutura.seguranca.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -29,7 +29,8 @@ public class UsuarioService {
 
     public void cadastrarUsuario(RegristroDTO data){
         String encryptedPassword = new BCryptPasswordEncoder().encode(data.password());
-        MongoUsuario Novousuario = new MongoUsuario(data.nome(), data.email(), encryptedPassword, data.tipoUsuario().getTipoUsuario());
+        MongoUsuario Novousuario = new MongoUsuario(data.nome(), data.email(),
+                                    encryptedPassword, data.tipoUsuario().getTipoUsuario());
 
         this.mongoDbRep.save(Novousuario);
     }
@@ -39,5 +40,12 @@ public class UsuarioService {
         var autentificacao = this.authenticationManager.authenticate(usernamePassword);
 
         return tokenService.geradorToken((MongoUsuario) autentificacao.getPrincipal());
+    }
+    
+    public MongoUsuario getUsuarioByToken(String token) {
+        String email = tokenService.validarToken(token);
+        MongoUsuario usuario = (MongoUsuario) mongoDbRep.findByEmailUsuario(email);
+        usuario.toString();
+        return usuario;
     }
 }
