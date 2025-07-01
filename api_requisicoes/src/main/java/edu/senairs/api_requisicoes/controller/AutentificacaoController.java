@@ -1,6 +1,6 @@
-package edu.senairs.api_requisicoes.adaptadores.entradas.controller;
+package edu.senairs.api_requisicoes.controller;
 
-import edu.senairs.api_requisicoes.aplicacao.service.UsuarioService;
+import edu.senairs.api_requisicoes.service.UsuarioService;
 import edu.senairs.api_requisicoes.entidades.usuarios.AutentificadorDTO;
 import edu.senairs.api_requisicoes.entidades.usuarios.LoginResponseDTO;
 import edu.senairs.api_requisicoes.entidades.usuarios.RegristroDTO;

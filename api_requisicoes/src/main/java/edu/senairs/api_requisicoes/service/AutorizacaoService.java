@@ -1,6 +1,6 @@
-package edu.senairs.api_requisicoes.aplicacao.service;
+package edu.senairs.api_requisicoes.service;
 
-import edu.senairs.api_requisicoes.adaptadores.saidas.repository.MongoUsuariosRepository;
+import edu.senairs.api_requisicoes.repository.MongoUsuariosRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

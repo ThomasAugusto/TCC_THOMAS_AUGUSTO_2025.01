@@ -1,6 +1,6 @@
-package edu.senairs.api_requisicoes.aplicacao.service;
+package edu.senairs.api_requisicoes.service;
 
-import edu.senairs.api_requisicoes.adaptadores.saidas.repository.MongoUsuariosRepository;
+import edu.senairs.api_requisicoes.repository.MongoUsuariosRepository;
 import edu.senairs.api_requisicoes.entidades.usuarios.AutentificadorDTO;
 import edu.senairs.api_requisicoes.entidades.usuarios.MongoUsuario;
 import edu.senairs.api_requisicoes.entidades.usuarios.RegristroDTO;

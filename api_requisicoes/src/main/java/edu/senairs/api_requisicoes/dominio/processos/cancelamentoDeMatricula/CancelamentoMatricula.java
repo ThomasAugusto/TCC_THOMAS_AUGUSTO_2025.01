@@ -1,12 +1,14 @@
 package edu.senairs.api_requisicoes.dominio.processos.cancelamentoDeMatricula;
 
 import edu.senairs.api_requisicoes.dominio.Cursos;
+import edu.senairs.api_requisicoes.dominio.usuarios.Aluno;
 
 public class CancelamentoMatricula {
     String nomeProcesso;
     String motivosCancelamento;
     Cursos curso;
     EstadoCDM estadoProcesso;
+    Aluno aluno;
 
     // O CancelamentoMatricula podera ser instanciado pelas entidades Aluno ou Secretaria
 
@@ -53,31 +55,31 @@ public class CancelamentoMatricula {
 
     /* Este metodo e invocado quando ha a necessidade do Aluno complementar dados, apos a complementacao devolve o
     processo a Secretaria */
-    public void processoSolicitado(){
+    public void enviarParaSecretaria(){
         estadoProcesso.processoSolicitado(this);
     }
 
     /* Este metodo e invocado quando a Secretaria verifica inconsistencias nos dados do Aluno e solicita a
      complementacao dos dados */
-    public void complementarDados(){
+    public void enviarParaAluno(){
         estadoProcesso.complementarDados(this);
     }
 
     /* Este metodo e invocado quando a Secretaria conclui a verificacao dos dados do Aluno e o processo e repassado a
     Coordenacao */
-    public void deferirEmCoordenacao() {
+    public void enviarParaCoordenacao() {
         estadoProcesso.deferirEmCoordenacao(this);
     }
 
     /* Este metodo e invocado quando a Coordenacao defere a solicitacao do Aluno e o processo e repassado para
     Biblioteca */
-    public void verificarPendenciasBiblioteca() {
+    public void enviarParaBiblioteca() {
         estadoProcesso.verificarPendenciasBiblioteca(this);
     }
 
     /* Este metodo e invocado quando a Biblioteca conclui seus procedimento internos e repasas o processo para
     o Financeiro */
-    public void executarProcessosFinanceiros() {
+    public void enviarParaFinanceiro() {
         estadoProcesso.executarProcessosFinanceiros(this);
     }
 

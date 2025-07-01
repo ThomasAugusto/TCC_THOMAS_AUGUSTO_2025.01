@@ -21,7 +21,7 @@ public class TrancamentoMatricula {
         this.nomeProcesso = "Trancamento de matrícula";
         this.numeroSemestresAfastado = numeroSemestresAfastado;
         this.motivosAfastamento = motivosAfastamento;
-        this.curso = curso;
+        this.curso = Cursos.valueOf(curso.getDescricao());
         this.estadoProcesso = new SolicitarTDM();
     }
 

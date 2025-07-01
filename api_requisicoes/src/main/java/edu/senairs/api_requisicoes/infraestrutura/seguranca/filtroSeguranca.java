@@ -1,6 +1,6 @@
 package edu.senairs.api_requisicoes.infraestrutura.seguranca;
 
-import edu.senairs.api_requisicoes.adaptadores.saidas.repository.MongoUsuariosRepository;
+import edu.senairs.api_requisicoes.repository.MongoUsuariosRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

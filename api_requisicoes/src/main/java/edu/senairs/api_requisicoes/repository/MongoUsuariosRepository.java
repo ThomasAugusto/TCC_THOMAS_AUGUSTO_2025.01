@@ -1,4 +1,4 @@
-package edu.senairs.api_requisicoes.adaptadores.saidas.repository;
+package edu.senairs.api_requisicoes.repository;
 
 import edu.senairs.api_requisicoes.entidades.usuarios.MongoUsuario;
 import org.springframework.data.mongodb.repository.MongoRepository;
