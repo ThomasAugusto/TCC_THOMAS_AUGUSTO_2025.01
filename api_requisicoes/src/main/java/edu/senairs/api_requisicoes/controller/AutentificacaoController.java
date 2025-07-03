@@ -21,8 +21,12 @@ public class AutentificacaoController {
     @PostMapping("/login")
     public ResponseEntity login(@RequestBody AutentificadorDTO data){
         String token = this.usuarioService.autentificarUsuario(data);
-        this.usuarioService.getUsuarioByToken(token);
-        return ResponseEntity.ok(new LoginResponseDTO(token));
+        var usuario = this.usuarioService.getUsuarioByToken(token);
+        return ResponseEntity.ok(new LoginResponseDTO(token,
+                usuario.getIdUsuario(),
+                usuario.getNomeUsuario(),
+                usuario.getEmailUsuario(),
+                usuario.getTipoUsuario()));
     }
 
     @PostMapping("/cadastrar")
