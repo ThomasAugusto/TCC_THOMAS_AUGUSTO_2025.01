@@ -1,11 +1,10 @@
 package edu.senairs.api_requisicoes.service;
 
 import edu.senairs.api_requisicoes.repository.MongoUsuariosRepository;
-import edu.senairs.api_requisicoes.entidades.usuarios.AutentificadorDTO;
-import edu.senairs.api_requisicoes.entidades.usuarios.MongoUsuario;
-import edu.senairs.api_requisicoes.entidades.usuarios.RegristroDTO;
+import edu.senairs.api_requisicoes.entidades.usuarios.autentificacao.AutentificadorDTO;
+import edu.senairs.api_requisicoes.entidades.usuarios.autentificacao.MongoUsuario;
+import edu.senairs.api_requisicoes.entidades.usuarios.autentificacao.RegristroDTO;
 import edu.senairs.api_requisicoes.infraestrutura.seguranca.TokenService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -14,14 +13,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class UsuarioService {
 
-    @Autowired
-    private MongoUsuariosRepository mongoDbRep;
+    private final MongoUsuariosRepository mongoDbRep;
 
-    @Autowired
-    private TokenService tokenService;
+    private final TokenService tokenService;
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
+    private final AuthenticationManager authenticationManager;
+
+    public UsuarioService(MongoUsuariosRepository mongoDbRep, TokenService tokenService, AuthenticationManager authenticationManager) {
+        this.mongoDbRep = mongoDbRep;
+        this.tokenService = tokenService;
+        this.authenticationManager = authenticationManager;
+    }
 
     public boolean emailUsuarioEhCadastrado(RegristroDTO data){
         return mongoDbRep.findByEmailUsuario(data.email()) != null;

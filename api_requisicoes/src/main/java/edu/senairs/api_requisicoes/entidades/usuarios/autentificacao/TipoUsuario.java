@@ -1,4 +1,4 @@
-package edu.senairs.api_requisicoes.entidades.usuarios;
+package edu.senairs.api_requisicoes.entidades.usuarios.autentificacao;
 
 public enum TipoUsuario {
     ALUNO("aluno"),
@@ -16,5 +16,9 @@ public enum TipoUsuario {
 
     public String getTipoUsuario(){
         return tipoUsuario;
+    }
+
+    public void setTipoUsuario(String tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
     }
 }

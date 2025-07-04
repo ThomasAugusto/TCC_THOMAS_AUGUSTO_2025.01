@@ -1,16 +1,12 @@
 package edu.senairs.api_requisicoes.entidades.usuarios;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
 @Setter
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@Getter
 public class Biblioteca {
     private String nome;
     private String email;

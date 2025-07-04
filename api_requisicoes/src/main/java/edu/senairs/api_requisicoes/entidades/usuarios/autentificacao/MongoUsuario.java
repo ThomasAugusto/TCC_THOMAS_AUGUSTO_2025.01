@@ -1,4 +1,4 @@
-package edu.senairs.api_requisicoes.entidades.usuarios;
+package edu.senairs.api_requisicoes.entidades.usuarios.autentificacao;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

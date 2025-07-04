@@ -1,4 +1,4 @@
-package edu.senairs.api_requisicoes.entidades.usuarios;
+package edu.senairs.api_requisicoes.entidades.usuarios.autentificacao;
 
 public record RegristroDTO(String nome,
                            String email,
