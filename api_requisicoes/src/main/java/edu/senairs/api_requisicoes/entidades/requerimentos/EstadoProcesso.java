@@ -5,10 +5,10 @@ import lombok.Getter;
 @Getter
 public enum EstadoProcesso {
     ENVIAR_SECRETARIA("Processo solicitado"),
-    ENVIAR_COORDENACAO("Processo em análise"),
-    ENVIAR_BIBLIOTECA("Processo em análise"),
-    ENVIAR_FINANCEIRO("Processo em análise"),
-    ENVIAR_ALUNO("Confirmar dados pessoais"),
+    ENVIAR_COORDENACAO("O processo encontra-se em análise na Coordenação"),
+    ENVIAR_BIBLIOTECA("Em análise na Biblioteca quanto a eventuais pendências de livros"),
+    ENVIAR_FINANCEIRO("Aguardando finalização no Setor Financeiro"),
+    ENVIAR_ALUNO("Solicita-se ao aluno a conferência dos dados pessoais"),
     CONCLUIDO("Processo concluído");
 
     private final String descricao;

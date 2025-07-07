@@ -4,6 +4,7 @@ import edu.senairs.api_requisicoes.service.UsuarioService;
 import edu.senairs.api_requisicoes.entidades.usuarios.autentificacao.AutentificadorDTO;
 import edu.senairs.api_requisicoes.entidades.usuarios.autentificacao.LoginResponseDTO;
 import edu.senairs.api_requisicoes.entidades.usuarios.autentificacao.RegristroDTO;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,6 +34,6 @@ public class AutentificacaoController {
             return ResponseEntity.badRequest().build();
         }
         this.usuarioService.cadastrarUsuario(data);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }
